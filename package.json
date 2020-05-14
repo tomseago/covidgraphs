@@ -1,0 +1,24 @@
+{
+  "name": "covidgraphs",
+  "version": "1.0.0",
+  "description": "Graphs of covid things",
+  "main": "server.js",
+  "repository": "git@github.com:tomseago/covidgraphs.git",
+  "author": "Tom Seago <tom@tomseago.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "csv": "^5.3.2",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+    "engines": {
+        "nodejs": ">=10.0.0"
+    }
+}

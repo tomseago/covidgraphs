@@ -1,0 +1,17 @@
+doctype html
+html
+    include head.pug
+    script(src="js/states.js")
+
+    body
+        h1 States Data
+
+        select#metricSelect(onchange="changeMetric(event)")
+            //option(value="deaths") Deaths
+            //option(value="admis") Admissions
+            //option(value="totdea") Total Deaths
+            //option(value="totdea") Total Deaths
+
+    div#selectedMetric
+        div#plot
+        include footer.pug
