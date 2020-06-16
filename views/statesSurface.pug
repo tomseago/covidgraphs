@@ -4,14 +4,29 @@ html
     script(src="js/states.js")
 
     body
-        h1 States Data
+        div#sidebar
+            h4 Metric
+            select#metricSelect(onchange="changeMetric(event)")
 
-        select#metricSelect(onchange="changeMetric(event)")
-            //option(value="deaths") Deaths
-            //option(value="admis") Admissions
-            //option(value="totdea") Total Deaths
-            //option(value="totdea") Total Deaths
+            h4 States
+            div#orderControl
+                label(for="sortSelect") Order States By
+                select#sortSelect(onchange="changeSort(event)")
+                    option(value="alpha" selected) Alphabetical
+                    option(value="metric") Metric
+                    option(value="pop") Population
+                    option(value="density") Density
+                    option(value="percent") Percent
 
-    div#selectedMetric
-        div#plot
+            button.sel-control(onclick="selSome('all')") All
+            button.sel-control(onclick="selSome('top10')") Top 10
+            button.sel-control(onclick="selSome('bot10')") Bottom 10
+
+            div#stateList
+
+
+
+        div#mainArea
+            div#plot
+
         include footer.pug
